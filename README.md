@@ -19,7 +19,7 @@ This is a simple web application built using Flask. It helps a teacher keep trac
 
 First, make sure Flask is installed. You can install it by running:
 
-## Bash
+Bash:
 
 pip install flask
 
@@ -27,7 +27,8 @@ pip install flask
 
 Run the following command to create the database and add some sample data:
 
-## Bash
+Bash:
+
 python init_db.py
 
 
@@ -35,7 +36,8 @@ python init_db.py
 
 Run the Flask app by typing:
 
-## Bash
+Bash:
+
 python app.py
 
 4. **Open the App**
@@ -84,4 +86,5 @@ IS211_Assignment13/
 
 ---
 Thank You
+
 Shreejana Ghalan Lama
