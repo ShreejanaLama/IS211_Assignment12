@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><title>Add Quiz Result</title></head>
+<body>
+    <h1>Add Quiz Result</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="POST">
+        Student:
+        <select name="student_id" required>
+            {% for student in students %}
+            <option value="{{ student[0] }}">{{ student[1] }} {{ student[2] }}</option>
+            {% endfor %}
+        </select><br><br>
+        Quiz:
+        <select name="quiz_id" required>
+            {% for quiz in quizzes %}
+            <option value="{{ quiz[0] }}">{{ quiz[1] }}</option>
+            {% endfor %}
+        </select><br><br>
+        Score: <input type="number" name="score" min="0" max="100" required><br><br>
+        <button type="submit">Add Result</button>
+    </form>
+    <br><a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>
